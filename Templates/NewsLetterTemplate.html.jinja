@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="..\Templates\Style.css">
+    <title>Daily Tech News</title>
+</head>
+<body>
+<span>
+    <h1>Daily tech news for {{ Date }}</h1>
+</span>
+    {% for Story in Stories %}
+        <div>
+            <h2>
+                {% if Story.Url +%}
+                    <a href="{{ Story.Url }}">{{ Story.Title }}</a>
+                {% else %}
+                    {{ Story.Title }} - No link available
+                {% endif %}
+            </h2>
+            <p>
+                Uploaded: {{ Story.CreationTime }} <br>
+                Posted by: {{ Story.Author }}<br>
+                Score: {{Story.Score}}<br>
+            </p>
+        </div>    
+    {% endfor %}
+</body>
+</html>

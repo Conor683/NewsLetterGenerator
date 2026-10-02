@@ -1,0 +1,4 @@
+{
+    "Top Stories":"https://hacker-news.firebaseio.com/v0/topstories.json?",
+    "New Stories":"https://hacker-news.firebaseio.com/v0/newstories.json?"
+}
